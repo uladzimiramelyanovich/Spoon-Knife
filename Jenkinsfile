@@ -1,4 +1,4 @@
-printnode('master') {
+node('master') {
   stage('SCM') {
     checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: 'refs/heads/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/uladzimiramelyanovich/Spoon-Knife.git']]]
   }
